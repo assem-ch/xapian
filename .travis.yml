@@ -1,0 +1,12 @@
+language: cpp
+compiler:
+    - gcc
+
+before_script:
+    - ./bootstrap
+    - ./configure
+
+script: make
+
+notifications:
+    email: false
