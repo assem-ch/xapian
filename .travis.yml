@@ -2,6 +2,14 @@ language: cpp
 compiler:
     - gcc
 
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install build-essential m4 perl python zlib1g-dev uuid-dev wget flex bison tcl
+  - sudo apt-get install libpcre3-dev libmagic-dev
+  - sudo apt-get install doxygen graphviz ghostscript texlive-latex-base texlive-extra-utils texlive-binaries texlive-fonts-extra texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended help2man python-docutils pngcrush
+
+
 before_script:
     - ./bootstrap
     - ./configure
